@@ -1,13 +1,12 @@
 #include "Inventory.h"
 #include <iostream>
 
-// 함수만
+
 Inventory::Inventory(int capacity)
     : items(new Item[capacity]), capacity(capacity), itemCount(0)
 {
 }
 
-// 나머지 함수들
 Inventory::~Inventory() {
     delete[] items;
     std::cout << "Inventory has been destroyed." << std::endl;
